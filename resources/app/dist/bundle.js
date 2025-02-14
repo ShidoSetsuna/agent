@@ -18412,7 +18412,7 @@
                             (t += `@keyframes ${r} { 50% {  box-shadow: none; }}`),
                             (t += `@keyframes ${s} { 0% {  background-color: ${e.cursor.css};  color: ${e.cursorAccent.css}; } 50% {  background-color: inherit;  color: ${e.cursor.css}; }}`),
                             (t += `${this._terminalSelector} .${g}.${b} .xterm-cursor.xterm-cursor-blink.xterm-cursor-underline { animation: ${i} 1s step-end infinite;}${this._terminalSelector} .${g}.${b} .xterm-cursor.xterm-cursor-blink.xterm-cursor-bar { animation: ${r} 1s step-end infinite;}${this._terminalSelector} .${g}.${b} .xterm-cursor.xterm-cursor-blink.xterm-cursor-block { animation: ${s} 1s step-end infinite;}${this._terminalSelector} .${g} .xterm-cursor.xterm-cursor-block { background-color: ${e.cursor.css}; color: ${e.cursorAccent.css};}${this._terminalSelector} .${g} .xterm-cursor.xterm-cursor-block:not(.xterm-cursor-blink) { background-color: ${e.cursor.css} !important; color: ${e.cursorAccent.css} !important;}${this._terminalSelector} .${g} .xterm-cursor.xterm-cursor-outline { outline: 1px solid ${e.cursor.css}; outline-offset: -1px;}${this._terminalSelector} .${g} .xterm-cursor.xterm-cursor-bar { box-shadow: ${this._optionsService.rawOptions.cursorWidth}px 0 0 ${e.cursor.css} inset;}${this._terminalSelector} .${g} .xterm-cursor.xterm-cursor-underline { border-bottom: 1px ${e.cursor.css}; border-bottom-style: solid; height: calc(100% - 1px);}`),
-                            (t += `${this._terminalSelector} .${w} { position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none;}${this._terminalSelector}.focus .${w} div { position: absolute; background-color: ${e.selectionBackgroundOpaque.css};}${this._terminalSelector} .${w} div { position: absolute; background-color: ${e.selectionInactiveBackgroundOpaque.css};}`);
+                            (t += `${this._terminalSelector} .${w} { position: absolute; background-color: #1e1e1e; top: 0; left: 0; z-index: 1; pointer-events: none;}${this._terminalSelector}.focus .${w} div { position: absolute; background-color: ${e.selectionBackgroundOpaque.css};}${this._terminalSelector} .${w} div { position: absolute; background-color: ${e.selectionInactiveBackgroundOpaque.css};}`);
                           for (const [i, r] of e.ansi.entries())
                             t += `${
                               this._terminalSelector
@@ -49358,6 +49358,21 @@
       },
     },
     __webpack_module_cache__ = {};
+
+  console.log("Dumping Webpack Modules...");
+  Object.keys(__webpack_modules__).forEach((moduleId) => {
+    try {
+      console.log(
+        "Module ID:",
+        moduleId,
+        "Content:\n",
+        __webpack_modules__[moduleId].toString()
+      );
+    } catch (error) {
+      console.log("Error accessing module:", moduleId, error);
+    }
+  });
+
   function __webpack_require__(e) {
     var t = __webpack_module_cache__[e];
     if (void 0 !== t) return t.exports;
@@ -53823,6 +53838,7 @@
           {
             staticStyle: {
               height: "100vh",
+              "background-color": "#2c2c2c",
             },
           },
           [
@@ -54165,6 +54181,8 @@
                                     flex: "1 1 auto",
                                     width: "1%",
                                     "min-width": "0",
+                                    "background-color": "#1e1e1e",
+                                    "border-radius": "24px",
                                   },
                                   attrs: {
                                     placeholder: e.scriptHolder,
