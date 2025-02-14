@@ -1,13 +1,13 @@
 # DEEPL FIXED
 So it seems like the development for Agent has stopped at least for now, and unfortunetly agent was left in a state where deepL translation was broken so I fixed it.
-This here is a version of agent that has the fixed deepL so you can once again enjoy translations from deepL.
 
 The old version used some outdated way of getting deepL translation so I simply updated it to use the new way to get deepL translations.
 
 ## HOW TO FIX AGENT
 
 1. Download the latest version of agent from the official repo: https://github.com/0xDC00/agent/releases/tag/nightly if you haven't already.
-2. Download the files from this repo. Now simply replace the 'app' folder in agent with the one from this repo.
+2. Download the files from this repo.  Now simply replace the 'app' folder in agent with the one from this repo. NOTE: Replacing the 'app' folder is OPTIONAL it only adds darkmode.
+
 3. Navigate to Agent/data/scripts and drag n drop the 'libTranslateDeepL.js' into there, it will ask you to replace with the old one, do it.
 
 ## HOW TO GET DEEPL TO WORK
